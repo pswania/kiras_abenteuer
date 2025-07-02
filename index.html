@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI‑RAs Abenteuer</title>
+    <script src="/script_base.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="menu-container"></div>
+      <div id="start-screen">
+        <h1>KI‑RAs Abenteuer</h1>
+      </div>
+
+      <div class="popup" onclick="myFunction()">
+        Hier starten!
+        <span class="popuptext" id="myPopup" onclick="event.stopPropagation()">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <p>Wie heißt du?</p>
+          <input
+            type="text"
+            name="playerName"
+            id="playerName"
+            placeholder="Dein Name"
+          />
+          <button onclick="saveNameAndContinue()">
+            Weiter
+          </button>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

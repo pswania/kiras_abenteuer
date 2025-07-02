@@ -1,0 +1,327 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url("https://cdn.glitch.global/7abc7470-1119-45ee-9661-ed5085438b1c/laptop_kira.png?v=1751283970617"),
+    linear-gradient(to bottom, rgba(240, 248, 255, 1), rgba(173, 216, 230, 1));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain, cover;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center; /* vertical centering */
+  background-color: #faedff; /* optional background */
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+
+
+#container {
+  padding: 40px;
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  width: 200px;
+  background-color: rgba(250, 237, 255, 0.15); /* #FAEDFF light pastel */
+  color: #041a59; /* dark blue */
+}
+button {
+  background-color: #ff8ad0; /* pink */
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #faedff; /* blush white */
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+button:hover {
+  background-color: #e9c7ff; /* pale purple */
+  color: #041a59;
+}
+
+#dialogBox {
+  background: rgba(4, 26, 89, 0.25); /* #041A59 dark blue transparent */
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  max-width: 500px;
+  color: #faedff; /* blush white */
+}
+#kiraAvatar {
+  width: 100px;
+  vertical-align: middle;
+}
+#dialogText {
+  display: inline-block;
+  width: 350px;
+  padding-left: 10px;
+  text-align: left;
+  color: #041a59;
+}
+
+.question-block {
+  text-align: left;
+  margin: 10px auto;
+  max-width: 400px;
+  background-color: rgba(250, 237, 255, 0.15); /* #FAEDFF very light pastel */
+  border-radius: 12px;
+  padding: 10px;
+  color: #041a59;
+}
+
+.question-block:hover {
+  background-color: rgba(156, 83, 212, 0.3); /* #9C53D4 purple */
+  color: #faedff;
+}
+
+.question-block label {
+  display: block;
+  margin: 1px 0;
+  color: #041a59;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: -50px;
+}
+input[type="text"] {
+  width: 400px;
+  background-color: rgba(250, 237, 255, 0.15); /* #FAEDFF */
+  color: #041a59;
+}
+
+input[type="text"]:hover {
+  background-color: rgba(156, 83, 212, 0.3); /* #9C53D4 */
+  color: #faedff;
+}
+
+input::placeholder {
+  text-align: center;
+  color: #041a59;
+  opacity: 1;
+}
+
+.popup-open-btn {
+  background-color: #ff8ad0;
+  color: #faedff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.custom-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 237, 255, 0.3); /* #FAEDFF transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.custom-popup-content {
+  background: linear-gradient(135deg, #9c53d4, #041a59);
+  color: #faedff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  text-align: left;
+}
+
+.custom-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #faedff;
+}
+
+.custom-popup input[type="text"]::placeholder {
+  color: #faedff;
+  opacity: 1;
+}
+
+.custom-popup input[type="text"] {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgba(255, 237, 255, 0.2); /* #FAEDFF */
+  color: #faedff;
+}
+
+.all-together {
+  background-color: rgba(255, 237, 255, 0.15);
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: #041a59;
+}
+
+.all-together label {
+  display: block;
+  margin: 5px 0;
+  color: #041a59;
+}
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #041a59;
+}
+
+/* Popup text */
+.popup .popuptext {
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background-color: #096282; /* medium blue */
+  color: #faedff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px;
+  z-index: 1;
+}
+
+/* Show popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+  opacity: 1;
+}
+
+/* Fade In animation */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  color: #faedff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#confirmationPopup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #faedff;
+  border: 1px solid #9c53d4;
+  padding: 20px;
+  z-index: 9999;
+  display: none;
+  box-shadow: 0 0 20px rgba(156, 83, 212, 0.2);
+  color: #041a59;
+}
+
+#confirmationPopup.show {
+  display: block;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: inline-block;
+}
+
+/* Button styling */
+.dropbtn {
+  background-color: #50e6cd;
+  color: #041a59;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #e9c7ff;
+  min-width: 160px;
+  border-radius: 6px;
+  box-shadow: 0px 8px 16px 0px rgba(156, 83, 212, 0.3);
+  z-index: 1;
+}
+
+/* Links in the dropdown */
+.dropdown-content a {
+  color: #041a59;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effect */
+.dropdown-content a:hover {
+  background-color: #9c53d4;
+  color: #faedff;
+}
+
+h1 {
+  font-family: Monaco, monospace;
+}
+
+

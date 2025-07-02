@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI‑RAs Abenteuer</title>
+    <script src="/script_base.js" defer></script>
+    <script src="../script_games_base.js" defer></script>
+    <script src="script_game2.js" defer></script>
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="../style_games.css" />
+    <link rel="stylesheet" href="style_game2.css" />
+
+    <style></style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="menu-container"></div>
+
+      <h1>KI‑RAs Verbindungen</h1>
+      <p>
+        Ziehe die Begriffe zu den passenden Erklärungen und sieh, was KI‑RA
+        dabei denkt!
+      </p>
+
+      <div class="game-section">
+        <div class="term-list">
+          <h3>Begriffe</h3>
+          <ul id="terms">
+            <li draggable="true" data-term="algorithm">Algorithmus</li>
+            <li draggable="true" data-term="training">Training</li>
+            <li draggable="true" data-term="windkraftwerk">Windkraftwerk</li>
+          </ul>
+        </div>
+
+        <div class="definition-list">
+          <h3>Erklärungen</h3>
+          <ul id="definitions">
+            <li data-definition="algorithm">
+              Ein genauer Ablaufplan zur Lösung eines Problems.
+            </li>
+            <li data-definition="training">
+              Der Lernprozess einer KI basierend auf Beispielen.
+            </li>
+            <li data-definition="windkraftwerk">
+              Macht Strom aus Wind
+            </li>
+             <li data-definition="katze">
+              miaut
+            </li>
+            <li data-definition="hund">
+              bellt
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p id="resultText" style="display: none; margin-bottom: 10px"></p>
+      <button id="checkBtn">Verbindungen prüfen</button>
+      <button id="resetBtn">Zurücksetzen</button>
+
+      <!-- Trigger/Open The Modal -->
+      <p>
+        <button id="explanation-btn">Erklärung</button>
+      </p>
+      <p>
+        <button
+          id="nextChapter-btn"
+          onclick="window.location.href='/chapters/chapter3.html'"
+          class="hidden"
+        >
+          Nächstes Kapitel
+        </button>
+      </p>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Das Blackbox Problem</h2>
+          </div>
+          <div class="modal-body">
+            <p>
+              Stell dir vor, du wirfst einen Ball in eine geheimnisvolle Kiste –
+              und auf der anderen Seite kommt ein Geschenk heraus. Du freust
+              dich, aber du hast keine Ahnung, was in der Kiste passiert ist. Du
+              weißt nur: Ball rein – Geschenk raus. Das ist ungefähr, was man
+              bei einer Black Box (auf Deutsch: „Schwarze Kiste“) meint.
+            </p>
+            <p>
+              Bei vielen künstlichen Intelligenzen (KI) funktioniert das ganz
+              ähnlich. Du gibst der KI eine Frage oder ein Bild – und sie gibt
+              dir eine Antwort. Aber wie genau sie zu dieser Antwort gekommen
+              ist, weiß oft niemand so richtig – nicht mal die Leute, die die KI
+              gebaut haben! Denn in der KI passieren viele komplizierte
+              Rechenschritte, die sich kaum noch nachverfolgen lassen. Die KI
+              lernt aus riesigen Datenmengen – aber wir können nicht immer
+              verstehen, wie sie denkt oder entscheidet.
+            </p>
+            <p>
+              Das kann gefährlich sein: Was, wenn die KI einen Fehler macht?
+              Oder wenn sie Entscheidungen trifft, die nicht fair sind? Wenn wir
+              nicht wissen, wie die KI „nachdenkt“, ist es schwer, sie zu
+              verbessern oder ihr zu vertrauen.
+            </p>
+            <p>
+              Deshalb sagen Forscher*innen: Eine KI sollte nicht zu sehr eine
+              Black Box sein. Wir müssen möglichst nachvollziehen können, was
+              sie tut – vor allem, wenn sie Entscheidungen über Menschen trifft.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

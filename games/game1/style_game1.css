@@ -1,0 +1,67 @@
+/* Game area styling */
+#game-area {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Step list container */
+#steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+/* Draggable step items */
+#steps-list li {
+  background-color: #faedff; /* lighter pastel from your palette */
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: 2px solid #9c53d4; /* purple from your palette */
+  border-radius: 8px;
+  cursor: grab;
+  transition: background-color 0.3s, transform 0.2s;
+  color: #041a59; /* dark blue text for contrast */
+  font-weight: 600;
+}
+
+#steps-list li:hover {
+  background-color: #e9c7ff; /* lighter purple hover */
+  transform: scale(1.02);
+}
+
+/* Buttons */
+#game-area button {
+  margin: 10px 8px;
+  padding: 10px 20px;
+  background-color: #50e6cd; /* teal from palette */
+  border: none;
+  border-radius: 6px;
+  color: #041a59; /* dark blue */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#game-area button:hover {
+  background-color: #41c9b5; /* slightly darker teal */
+}
+
+/* Feedback */
+#feedback {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #041a59; /* dark blue */
+}
+
+/* Hidden next button initially */
+.hidden {
+  display: none;
+}
+
+

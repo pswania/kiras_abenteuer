@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI‑RA weiß zu viel</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="../style_games.css" />
+    <link rel="stylesheet" href="style_game4.css" />
+    <script src="/script_base.js" defer></script>
+    <script src="../script_games_base.js" defer></script>
+    <script src="script_game4.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="menu-container"></div>
+
+      <h1>KI‑RA will alles wissen...</h1>
+      <p>
+        KI‑RA ist jetzt vollständig trainiert – sie möchte aber noch mehr über dich wissen. Entscheide, welche
+        Informationen sie wirklich kennen darf.
+      </p>
+
+      <div class="game-section">
+        <ul id="privacy-questions">
+          <!-- questions will be inserted dynamically -->
+        </ul>
+
+        <div id="warning" class="hidden warning-box">
+          ⚠️ Vorsicht: Das Teilen persönlicher Daten kann Risiken bergen!
+        </div>
+
+        <p id="submitInfo" class="hidden">
+          Du hast alle Fragen beantwortet. Überlege dir gut, was KI‑RA wissen
+          darf!
+        </p>
+        <button id="submitBtn">Fertig</button>
+
+        <button id="resetBtn">Zurücksetzen</button>
+        <p><button id="explanation-btn">Erklärung</button></p>
+        <p>
+          <button
+            id="nextChapter-btn"
+            onclick="window.location.href='/chapters/chapter5.html'"
+            class="hidden"
+          >
+            Nächstes Kapitel
+          </button>
+        </p>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Was KIs dürfen – und was (noch) nicht</h2>
+            </div>
+            <div class="modal-body">
+              <p>
+                Künstliche Intelligenzen wie KI RA können viele Dinge: Texte
+                schreiben, Fragen beantworten, Bilder erkennen oder sogar Musik
+                machen. Aber darf eine KI einfach alles tun, was sie kann?
+              </p>
+              <p>
+                Die Antwort ist: Nein. In vielen Ländern gibt es Regeln und
+                Gesetze, die bestimmen, was KIs dürfen – und was nicht. Zum
+                Beispiel dürfen KIs keine Entscheidungen über Menschen treffen,
+                wenn es um wichtige Dinge wie Gesundheit, Schule oder
+                Gerechtigkeit geht – jedenfalls nicht allein. Dafür braucht es
+                Menschen, die mitdenken und die Verantwortung übernehmen.
+              </p>
+              <p>
+                Außerdem dürfen KIs nicht einfach Daten über dich sammeln, ohne
+                dass du das weißt oder erlaubst. Das nennt man Datenschutz. Du
+                darfst immer selbst entscheiden, was du teilst – und wem du
+                vertraust.
+              </p>
+              <p>
+                Das Problem ist: Viele Regeln für KI sind noch ganz neu, und
+                manche fehlen sogar noch. Deshalb arbeiten Forscherinnen,
+                Politikerinnen und Fachleute daran, neue Gesetze zu schreiben,
+                damit KI den Menschen hilft – und niemandem schadet.
+              </p>
+              <p>
+                Auch du kannst mithelfen: Stell Fragen, sei kritisch, und
+                überlege bei jeder KI-Anwendung: „Fühlt sich das richtig an? Ist
+                das fair?“
+              </p>
+              <p>
+                Denn am Ende ist klar: KI ist schlau – aber Menschen brauchen
+                Herz und Verstand.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

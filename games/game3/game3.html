@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI‑RA lernt</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="../style_games.css" />
+    <link rel="stylesheet" href="style_game3.css" />
+
+    <script src="/script_base.js" defer></script>
+    <script src="../script_games_base.js" defer></script>
+    <script src="script_game3.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+           <h1>KI‑RAs Erinnerungen</h1>
+      <div id="menu-container"></div>
+ 
+
+      <p>Ziehe passende Antworten zu den Fragen. So trainierst du KI‑RA!</p>
+
+      <div class="game-section">
+        <div class="box-column">
+          <ul id="inputs" class="box-list">
+            <li class="box" data-input="greeting">Wie begrüßt man jemanden?</li>
+            <li class="box" data-input="color">Was ist deine Lieblingsfarbe?</li>
+            <li class="box" data-input="weather">Wie ist das Wetter?</li>
+            <li class="box" data-input="animal">Was ist dein Lieblingstier?</li>
+            <li class="box" data-input="food">Was isst du am liebsten?</li>
+            <li class="box" data-input="time">Wie spät ist es?</li>
+          </ul>
+        </div>
+
+        <div class="box-column">
+          <h3>Antworten</h3>
+          <ul id="outputs" class="box-list">
+            <li class="box draggable" draggable="true" data-output="food">Pizza.</li>
+            <li class="box draggable" draggable="true" data-output="greeting">Hallo!</li>
+            <li class="box draggable" draggable="true" data-output="animal">Katze.</li>
+            <li class="box draggable" draggable="true" data-output="time">12 Uhr.</li>
+            <li class="box draggable" draggable="true" data-output="color">Blau.</li>
+            <li class="box draggable" draggable="true" data-output="weather">Es regnet.</li>
+          </ul>
+
+        </div>
+      </div>
+      <div id="kiraOutput" class="hidden"></div>
+
+      <p>
+        <button id="trainBtn">KI‑RA trainieren</button>
+        <button id="testBtn" class="hidden">KI‑RA testen</button>
+      </p>
+      <p><button id="resetBtn">Zurücksetzen</button></p>
+
+      <button id="explanation-btn">Erklärung</button>
+      <p>
+        <button
+          id="nextChapter-btn"
+          onclick="window.location.href='/chapters/chapter4.html'"
+          class="hidden"
+        >
+          Nächstes Kapitel
+        </button>
+      </p>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Wie eine KI lernt - und warum sie auch Fehler machen kann</h2>
+          </div>
+          <div class="modal-body">
+            <p>
+              Künstliche Intelligenz – also auch KI-RA – kann viele Dinge
+              lernen: Sprachen verstehen, Bilder erkennen oder Texte schreiben.
+              Aber eine KI lernt ganz anders als du. Du lernst mit dem Kopf, mit
+              Gefühlen, mit Erfahrung. Eine KI lernt aus Daten.
+            </p>
+            <p>
+              Das bedeutet: Die KI bekommt ganz viele Beispiele gezeigt. Zum
+              Beispiel 1000 Bilder von Katzen. Wenn jedes Bild beschriftet ist
+              („Katze“), lernt die KI: „Aha, so sieht eine Katze aus!“
+              Irgendwann kann sie selbst entscheiden, ob ein neues Bild auch
+              eine Katze zeigt.
+            </p>
+            <p>
+              Aber hier gibt’s ein Problem: Wenn die Beispiele falsch sind,
+              lernt die KI auch falsch. Wenn zum Beispiel jemand ein Foto von
+              einem Hund als „Katze“ beschriftet hat, denkt die KI später
+              vielleicht, dass jeder Hund eine Katze ist!
+            </p>
+            <p>
+              Noch schlimmer: Manchmal „erfindet“ die KI Dinge. Sie klingt sehr
+              überzeugt, sagt aber etwas Falsches. Zum Beispiel könnte sie
+              sagen: „Die Sonne ist blau.“ Das klingt schlau – ist aber
+              natürlich Quatsch. KIs wissen nicht, was richtig oder falsch ist –
+              sie rechnen nur mit Wörtern und Mustern. Deshalb ist es wichtig,
+              dass du bei KIs immer genau überlegst: Klingt das logisch? Stimmt
+              das wirklich? Frag nach, schau nach, oder frag einen Menschen.
+            </p>
+            <p>
+              Auch wenn KI-RA viel weiß – sie ist kein echter Mensch. Und wie
+              jeder Computer kann sie auch mal Unsinn erzählen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

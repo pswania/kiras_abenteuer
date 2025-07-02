@@ -1,0 +1,95 @@
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KI‑RAs Abenteuer</title>
+    <script src="/script_base.js" defer></script>
+    <script src="../script_games_base.js" defer></script>
+    <script src="script_game1.js" defer></script>
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="../style_games.css" />
+    <link rel="stylesheet" href="style_game1.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="menu-container"></div>
+      
+      <h1>KI-RAs Verbindungen</h1>
+
+      <p>
+        KI‑RA ist ganz durcheinander – ihr Gedächtnis ist voller Wolken! Damit
+        sie sich wieder erinnern kann, musst du herausfinden, wie ein
+        Algorithmus funktioniert.
+      </p>
+      <p>
+        Ein Algorithmus ist wie eine Anleitung: Schritt für Schritt sagt er der
+        KI, was sie tun soll. Aber Achtung – die Schritte sind durcheinander
+        geraten!
+      </p>
+      <p>
+        Ordne die Schritte in die richtige Reihenfolge, damit KI‑RA wieder weiß,
+        wie sie denken soll.
+      </p>
+      <p>Bist du bereit? Los geht’s!</p>
+
+      <div id="game-area">
+        <ul id="steps-list">
+          <!-- JS will populate these -->
+        </ul>
+        <button onclick="checkOrder()">✅ Reihenfolge überprüfen</button>
+        <button id="resetBtn">Zurücksetzen</button>
+
+        <p id="feedback"></p>
+      </div>
+      <!-- Trigger/Open The Modal -->
+      <button id="explanation-btn">Erklärung</button>
+      <p>
+        <button
+          id="nextChapter-btn"
+          onclick="window.location.href='/chapters/chapter2.html'"
+          class="hidden"
+        >
+          Nächstes Kapitel
+        </button>
+      </p>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Was ist ein Algorithmus?</h2>
+          </div>
+          <div class="modal-body">
+            <p>
+              Ein Algorithmus ist wie eine ganz genaue Anleitung, die Schritt
+              für Schritt erklärt, was gemacht werden soll. Du kannst dir das
+              vorstellen wie ein Rezept beim Kochen oder Backen: Wenn du zum
+              Beispiel einen Kuchen machen willst, steht im Rezept genau, was du
+              brauchst und in welcher Reihenfolge du alles tun musst. Erst die
+              Eier in eine Schüssel, dann Zucker und Mehl dazu, umrühren, in den
+              Ofen – fertig! Genauso funktionieren Algorithmen in der
+              Computerwelt.
+            </p>
+            <p>
+              Auch ein Computer braucht klare Anweisungen, die immer gleich
+              ausgeführt werden. Ein Algorithmus für eine KI kann zum Beispiel
+              so aussehen: „Wenn jemand Hallo sagt, dann antworte mit Hallo
+              zurück.“ Oder: „Wenn ein Bild eine Katze zeigt, speichere: Das ist
+              eine Katze.“ Algorithmen helfen der KI also dabei, Dinge zu
+              erkennen, zu sortieren oder Entscheidungen zu treffen. Sie sind
+              besonders wichtig, weil KIs selbst nicht denken wie Menschen – sie
+              folgen immer den Regeln, die ihnen vorgegeben wurden.
+            </p>
+            <p>
+              In unserem Spiel hast du einen Algorithmus für KI-RA gebaut. Du
+              hast die richtigen Schritte in die richtige Reihenfolge gebracht,
+              damit KI-RA weiß, was sie tun soll. Damit hast du ihr geholfen,
+              wieder ein Stück ihrer Erinnerung zurückzubekommen!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

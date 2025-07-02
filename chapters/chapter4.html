@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="../script_base.js" defer></script>
+    <script src="script_dialogues.js" defer></script>
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style_chapters.css" />
+
+    <title>KI‑RAs Abenteuer</title>
+  </head>
+  <body class="chapter4">
+    <div id="container">
+
+      <div id="menu-container"></div>
+
+      <div id="dialogue-box">
+        <p id="dialogue-text"></p>
+      </div>
+      
+      <p>
+        <button id="backBtn" onclick="previousDialogue()" class="hidden">
+          ⟵
+        </button>
+        <button id="nextBtn" onclick="nextDialogue()">⟶</button>
+      </p>
+      
+      <button
+        id="startGameBtn"
+        onclick="window.location.href='/games/game4/game4.html'"
+        class="hidden"
+      >
+        🎮 Spiel starten
+      </button>
+    </div>
+  </body>
+</html>

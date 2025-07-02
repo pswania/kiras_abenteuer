@@ -1,0 +1,88 @@
+/* Chapter-specific background images */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body.chapter1 {
+  background-image:
+    url("https://cdn.glitch.global/7abc7470-1119-45ee-9661-ed5085438b1c/laptop_kira.png?v=1751445281268"),
+    linear-gradient(to bottom, rgba(250, 237, 255, 1), rgba(233, 199, 255, 1));
+}
+
+body.chapter1-bg1 {
+  background-image:
+    url("https://cdn.glitch.global/7abc7470-1119-45ee-9661-ed5085438b1c/laptop_kira_glitch.gif?v=1751445275939"),
+    linear-gradient(to bottom, rgba(250, 237, 255, 1), rgba(233, 199, 255, 1));
+}
+
+body.chapter1-bg2 {
+  background-image:
+    url("https://cdn.glitch.global/7abc7470-1119-45ee-9661-ed5085438b1c/glitch_background_ch1.gif?v=1751283670340"),
+    linear-gradient(to bottom, rgba(250, 237, 255, 1), rgba(233, 199, 255, 1));
+}
+
+body.chapter1-bg3 {
+  background-image:
+    url("https://cdn.glitch.global/7abc7470-1119-45ee-9661-ed5085438b1c/1.png?v=1751283855838"),
+    linear-gradient(to bottom, rgba(250, 237, 255, 1), rgba(233, 199, 255, 1));
+}
+
+
+body.chapter2 {
+  background-image:
+    url("https://cdn.glitch.global/7abc7470-1119-45ee-9661-ed5085438b1c/2.png?v=1751283859628"),
+   linear-gradient(to bottom, rgba(240, 248, 255, 1), rgba(173, 216, 230, 1));
+}
+
+body.chapter3 {
+  background-image:
+    url("https://cdn.glitch.global/7abc7470-1119-45ee-9661-ed5085438b1c/2.png?v=1751283859628"),
+    linear-gradient(to bottom, rgba(240, 248, 255, 1), rgba(173, 216, 230, 1));
+  
+}
+
+body.chapter4 {
+  background-image:
+    url("https://cdn.glitch.global/7abc7470-1119-45ee-9661-ed5085438b1c/3.png?v=1751283865181"),
+    linear-gradient(to bottom, rgba(240, 248, 255, 1), rgba(173, 216, 230, 1));
+}
+
+body.chapter5 {
+  background-image:
+    url("https://cdn.glitch.global/7abc7470-1119-45ee-9661-ed5085438b1c/4.png?v=1751283874276"),
+    linear-gradient(to bottom, rgba(240, 248, 255, 1), rgba(173, 216, 230, 1));
+}
+
+#dialogue-box {
+    position: relative; 
+  background-color: rgba(250, 237, 255, 0.9); /* Blush White, semi-opaque */
+  padding: 5px 5px;
+  border-radius: 10px;
+  width: 300px;         /* Fixed width */
+  margin: 10px auto;
+  text-align: center;
+  color: #041A59;       /* Deep Blue */
+  /*overflow: auto;       /* Adds scrollbars if content overflows */
+    z-index: 10;
+}
+
+#dialogue-box:after {
+  content: '';
+  position: absolute;
+  bottom: -25px;  /* push just below the box */
+  left: 20px;     /* from the left edge */
+  width: 0;
+  height: 0;
+  border: 25px solid transparent;
+  border-top-color: rgba(250, 237, 255, 0.9); /* match bubble color */
+  border-bottom: 0;
+  border-left: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Monaco, monospace;
+}
